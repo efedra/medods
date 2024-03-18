@@ -5,7 +5,7 @@ import {useVuelidate} from '@vuelidate/core'
 import {required, minLength, maxLength, numeric} from '@vuelidate/validators'
 import {helpers} from '@vuelidate/validators'
 
-const form = reactive({
+const form = ref({
   surname: "",
   name: "",
   secondName: "",
