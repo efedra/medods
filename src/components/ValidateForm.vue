@@ -104,17 +104,17 @@ function clearForm(v) {
 }
 
 function pushClient(str) {
-  if (!this.form.typeClient.has(str)) {
-    this.form.typeClient.delete("Клиент")
-    this.form.typeClient.add(str)
+  if (!form.value.typeClient.has(str)) {
+    form.value.typeClient.delete("Клиент")
+    form.value.typeClient.add(str)
   }
 }
 
 function deleteClient(str, event) {
   event.stopPropagation();
-  this.form.typeClient.delete(str)
-  if (this.form.typeClient.size === 0) {
-    this.form.typeClient.add("Клиент")
+  form.value.typeClient.delete(str)
+  if (form.value.typeClient.size === 0) {
+    form.value.typeClient.add("Клиент")
   }
 }
 
