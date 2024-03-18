@@ -1,6 +1,6 @@
 <script setup>
 import '../assets/validate.css'
-import {reactive, ref, watch,onMounted} from 'vue'
+import {reactive, ref, watch, onMounted} from 'vue'
 import {useVuelidate} from '@vuelidate/core'
 import {required, minLength, maxLength, numeric} from '@vuelidate/validators'
 import {helpers} from '@vuelidate/validators'
@@ -90,8 +90,7 @@ function clearForm(v) {
   this.form.doctor = "Лечащий врач",
       this.form.sms = false
 
-  this.form.index = "",
-      this.form.city = "",
+  this.form.index = "", this.form.city = "",
       this.form.region = "",
       this.form.country = "",
       this.form.street = "",
@@ -111,7 +110,7 @@ function pushClient(str) {
   }
 }
 
-function deleteClient(str,event) {
+function deleteClient(str, event) {
   event.stopPropagation();
   this.form.typeClient.delete(str)
   if (this.form.typeClient.size === 0) {
@@ -125,6 +124,7 @@ function deleteClient(str,event) {
   <div class="container main main_margin">
     <h2 class="main-header">Валидация формы</h2>
     <form>
+      <div class="validate-subtext">*Поле обязательное для заполнения.</div>
       <div class="validate-person validate-block">
         <p class="validate-subtext">Информация о вас:</p>
         <div class="validate-person__grid">
