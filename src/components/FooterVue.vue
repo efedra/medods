@@ -7,7 +7,7 @@ import {ref} from 'vue'
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__description">Данный сайт является тестовым заданием в компанию Medods на должность Junior
-        Frontend разработчик АААА
+        Frontend разработчик
       </div>
       <div class="git">
         <a href="https://github.com/efedra/medods" target="_blank">
